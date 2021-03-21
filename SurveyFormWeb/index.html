@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTravel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container text-white">
+        <section class="m-auto mt-4 w-50">
+            <header class="header text-center">
+                <h1 id="title" class="fw-bolder">GoTravel Survey Form</h1>
+                <p id="description" class="fw-light">Thank you for using <span>GoTravel</span> as your partner on the journey. Please help us to improve our performance.</p>
+            </header>
+
+            <form id="survey-form">
+                <div class="shadow p-5 pt-3 mb-5 rounded">
+                    <div class="from-grup mb-3">
+                        <label id="name-label" for="name">Name </label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="from-grup mb-3">
+                        <label id="email-label" for="email ">Email </label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="from-grup mb-3">
+                        <label id="number-label" for="number">Age </label>
+                        <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age" />
+                    </div>
+
+                    <div class="form-grup mb-3">
+                        <p>What your job?</p>
+                        <select class="form-select" aria-label="Default select example" id="dropdown" required>
+                      <option selected>Select current job</option>
+                      <option value="student">Student</option>
+                      <option value="entrepreneur">Entrepreneur</option>
+                      <option value="employees">Employees</option>
+                      <option value="other">Other</option>
+                    </select>
+                    </div>
+
+                    <div class="form-grup mb-3">
+                        <p>Would you recommend <span>GoTravel</span> to a friend?</p>
+                        <div class="form-check">
+                            <input type="radio" name="flexRadioDefault" value="definitely" class="form-check-input" id="flexRadioDefault1" checked>
+                            <label class="form-check-label" for="flexRadioDefault1">Definitely</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="flexRadioDefault" value="maybe" class="form-check-input" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault12">Maybe</label></div>
+
+                        <div class="form-check">
+                            <input type="radio" name="flexRadioDefault" value="not-sure" class="form-check-input" id="flexRadioDefault3">
+                            <label class="form-check-label" for="flexRadioDefault3">Not Sure</label>
+                        </div>
+                    </div>
+
+                    <div class="form-grup mb-3">
+                        <p>What is your favorite travel package on <span>GoTravel</span>?</p>
+                        <div class="form-check">
+                            <input type="checkbox" value="package-oneday" class="form-check-input" id="flexCheckOneDay">
+                            <label class="form-check-label" for="flexCheckOneDay">One Day Trip</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" value="package-family" class="form-check-input" id="flexCheckFamily">
+                            <label class="form-check-label" for="flexCheckFamily">Family Trip</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" value="package-fulltime" class="form-check-input" id="flexCheckFulltime" checked>
+                            <label class="form-check-label" for="flexCheckFulltime">Fulltime Trip</label>
+                        </div>
+                    </div>
+
+                    <div class="form-grup mb-3">
+                        <label for="formFile" class="form-label">Show your best photos</label>
+                        <input type="file" class="form-control" id="formFile">
+                    </div>
+
+                    <div class="form-grup mb-3">
+                        <label for="commmet" class="form-label">Give your review</label>
+                        <textarea class="form-control" id="comment" rows="3" placeholder="Enter your comment here ... "></textarea>
+                    </div>
+
+                    <div class="form-grup mt-5 d-grid gap-2 col-4 mx-auto">
+                        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>
