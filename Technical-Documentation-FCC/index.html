@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCC Technical Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header>Java</header>
+
+      <a href="#Java_Programming_Language" class="nav-link">Java Programming Language</a>
+      <a href="#Java_Identifier" class="nav-link">Java Identifier</a>
+      <a href="#Data_Types_in_Java" class="nav-link">Data Types in Java</a>
+      <a href="#Variables_in_Java" class="nav-link">Variables in Java</a>
+      <a href="#Operators_in_Java" class="nav-link">Operators in Java</a>
+      
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Java_Programming_Language">
+        <header>Java Programming Language</header>
+        <p>Java is one of the most popular and widely used programming language.
+          <ul>
+            <li>Java has been one of the most popular programming language for many years.</li>
+            <li>Java is Object Oriented. However it is not considered as pure object oriented as it provides support for primitive data types (like int, char, etc)</li>
+            <li>The Java codes are first compiled into byte code (machine independent code). Then the byte code runs on Java Virtual Machine (JVM) regardless of the underlying architecture.</li>
+            <li>Java syntax is similar to C/C++. But Java does not provide low level programming functionalities like pointers. Also, Java codes are always written in the form of classes and objects.</li>
+            <li>Java is used in all kind of applications like Mobile Applications (Android is Java based), desktop applications, web applications, client server applications, enterprise applications and many more.</li>
+            <li>When compared with C++, Java codes are generally more maintainable because Java does not allow many things which may lead bad/inefficient programming if used incorrectly. For example, non-primitives are always references in Java. So we cannot pass large objects (like we can do in C++) to functions, we always pass references in Java. One more example, since there are no pointers, bad memory access is also not possible.</li>
+            <li>When compared with Python, Java kind of fits between C++ and Python. The programs written in Java typically run faster than corresponding Python programs and slower than C++. Like C++, Java does static type checking, but Python does not.</li>
+          </ul>
+        </p>
+        <h4>Simple Hello World Program :</h4>
+        <code>
+          <pre>
+            // A Java program to print "Hello World" 
+            public class GFG { 
+                public static void main(String args[]) 
+                { 
+                    System.out.println("Hello World"); 
+                } 
+            }</pre>
+        </code>
+      </section>
+      
+      <section class="main-section" id="Java_Identifier">
+        <header>Java Identifier</header>
+        <p>
+          In programming languages, identifiers are used for identification
+          purposes. In Java, an identifier can be a class name, method name,
+          variable name, or label. For example :
+        </p>
+        <code>
+          <pre>
+                public class Test { 
+                     public static void main(String[] args){
+                         int a = 20; }
+                }
+            </pre
+          >
+        </code>
+        <p>In the above java code, we have 5 identifiers namely :</p>
+        <ul>
+          <li><strong>Test</strong> : class name.</li>
+          <li><strong>main</strong> : method name.</li>
+          <li><strong>String</strong> : predefined class name.</li>
+          <li><strong>args</strong> : variable name.</li>
+          <li><strong>a</strong> : variable name.</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Data_Types_in_Java">
+        <header>Data types in Java</header>
+        <p>Java has two categories of data :</p>
+        <ul>
+          <li>
+            <strong>Primitive Data Type</strong>: such as boolean, char, int,
+            short, byte, long, float, and double
+          </li>
+          <li>
+            <strong>Non-Primitive Data Type or Object Data Type</strong> : such
+            as String, Array, etc.
+          </li>
+        </ul>
+        <div class="data_type">
+          <h4>Primitive Data Type</h4>
+          <p>
+            Primitive data are only single values and have no special
+            capabilities. There are <strong>8 primitive data types</strong>:
+          </p>
+          <ol>
+            <li>
+              <strong>boolean</strong> : boolean data type represents only one
+              bit of information either true or false, but the size of the
+              boolean data type is virtual machine-dependent. Values of type
+              boolean are not converted implicitly or explicitly (with casts) to
+              any other type. But the programmer can easily write conversion
+              code.
+            </li>
+            <li>
+              <strong>byte</strong> : The byte data type is an 8-bit signed
+              two’s complement integer. The byte data type is useful for saving
+              memory in large arrays.
+            </li>
+            <li>
+              <strong>short</strong> : The short data type is a 16-bit signed
+              two’s complement integer. Similar to byte, use a short to save
+              memory in large arrays, in situations where the memory savings
+              actually matters.
+            </li>
+            <li>
+              <strong>int</strong> : It is a 32-bit signed two’s complement
+              integer.
+            </li>
+            <li>
+              <strong>long</strong> : The long data type is a 64-bit two’s
+              complement integer.
+            </li>
+            <li>
+              <strong>float</strong> : The float data type is a single-precision
+              32-bit IEEE 754 floating-point. Use a float (instead of double) if
+              you need to save memory in large arrays of floating-point numbers.
+            </li>
+            <li>
+              <strong>double</strong> : The double data type is a
+              double-precision 64-bit IEEE 754 floating-point. For decimal
+              values, this data type is generally the default choice.
+            </li>
+            <li>
+              <strong>char</strong> : The char data type is a single 16-bit
+              Unicode character.
+            </li>
+          </ol>
+          <code>
+            <pre>
+                class DataType{
+                    public static void main(String[] args){
+                        // declaring character
+                        char a = 'G';
+  
+                        // Integer data type is generally
+                        // used for numeric values
+                        int i = 89;
+  
+                        // use byte and short
+                        // if memory is a constraint
+                        byte b = 4;
+
+                        // this will give error as number is
+                        // larger than byte range
+                        // byte b1 = 7888888955;
+  
+                        short s = 56;
+  
+                        // this will give error as number is
+                        // larger than short range
+                        // short s1 = 87878787878;
+  
+                        // by default fraction value
+                        // is double in java
+                        double d = 4.355453532;
+  
+                        // for float use 'f' as suffix
+                        float f = 4.7333434f;
+  
+                        System.out.println("char: " + a);
+                        System.out.println("integer: " + i);
+                        System.out.println("byte: " + b);
+                        System.out.println("short: " + s);
+                        System.out.println("float: " + f);
+                        System.out.println("double: " + d);
+                    }
+                }
+            </pre>
+          </code>
+        </div>
+        <div class="data_type">
+          <h4>Non-Primitive Data Type or Reference Data Types</h4>
+          <p>
+            The Reference Data Types will contain a memory address of variable
+            value because the reference types won’t store the variable value
+            directly in memory. They are strings, objects, arrays, etc.
+          </p>
+          <ol>
+            <li>
+              <strong class="non_primitive">String</strong> : Strings are
+              defined as an array of characters. The difference between a
+              character array and a string in Java is, the string is designed to
+              hold a sequence of characters in a single variable whereas, a
+              character array is a collection of separate char type entities.
+            </li>
+            <li>
+              <strong class="non_primitive">Class</strong> : A class is a
+              user-defined blueprint or prototype from which objects are
+              created. It represents the set of properties or methods that are
+              common to all objects of one type. In general, class declarations
+              can include these components, in order:
+              <ul>
+                <li>
+                  <strong>Modifiers</strong>: A class can be public or has
+                  default access (Refer this for details).
+                </li>
+                <li>
+                  <strong>Class name</strong>: The name should begin with a
+                  initial letter (capitalized by convention).
+                </li>
+                <li>
+                  <strong>Superclass(if any)</strong>: The name of the class’s
+                  parent (superclass), if any, preceded by the keyword extends.
+                  A class can only extend (subclass) one parent.
+                </li>
+                <li>
+                  <strong>Interfaces(if any)</strong>: A comma-separated list of
+                  interfaces implemented by the class, if any, preceded by the
+                  keyword implements. A class can implement more than one
+                  interface.
+                </li>
+                <li>
+                  <strong>Body</strong>: The class body surrounded by braces, {
+                  }.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong class="non_primitive">Object</strong>: It is a basic unit
+              of Object-Oriented Programming and represents the real-life
+              entities. A typical Java program creates many objects, which as
+              you know, interact by invoking methods. An object consists of :
+              <ul>
+                <li>
+                  <strong>State</strong>: It is represented by attributes of an
+                  object. It also reflects the properties of an object.
+                </li>
+                <li>
+                  <strong>Behavior</strong>: It is represented by methods of an
+                  object. It also reflects the response of an object with other
+                  objects.
+                </li>
+                <li>
+                  <strong>Identity</strong>: It gives a unique name to an object
+                  and enables one object to interact with other objects.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong class="non_primitive">Interface</strong>: Like a class, an
+              interface can have methods and variables, but the methods declared
+              in an interface are by default abstract (only method signature,
+              nobody).
+              <ul>
+                <li>
+                  Interfaces specify what a class must do and not how. It is the
+                  blueprint of the class.
+                </li>
+                <li>
+                  An Interface is about capabilities like a Player may be an
+                  interface and any class implementing Player must be able to
+                  (or must implement) move(). So it specifies a set of methods
+                  that the class has to implement.
+                </li>
+                <li>
+                  If a class implements an interface and does not provide method
+                  bodies for all functions specified in the interface, then the
+                  class must be declared abstract.
+                </li>
+                <li>
+                  A Java library example is, Comparator Interface. If a class
+                  implements this interface, then it can be used to sort a
+                  collection.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong class="non_primitive">Array</strong>: An array is a group
+              of like-typed variables that are referred to by a common name.
+              Arrays in Java work differently than they do in C/C++. The
+              following are some important points about Java arrays.
+              <ul>
+                <li>
+                  In Java, all arrays are dynamically allocated. (discussed
+                  below)
+                </li>
+                <li>
+                  Since arrays are objects in Java, we can find their length
+                  using member length. This is different from C/C++ where we
+                  find length using size.
+                </li>
+                <li>
+                  A Java array variable can also be declared like other
+                  variables with [] after the data type.
+                </li>
+                <li>
+                  The variables in the array are ordered and each has an index
+                  beginning from 0.
+                </li>
+                <li>
+                  Java array can be also be used as a static field, a local
+                  variable or a method parameter.
+                </li>
+                <li>
+                  The size of an array must be specified by an int value and not
+                  long or short.
+                </li>
+                <li>
+                  The direct superclass of an array type is
+                  <strong class="non_primitive">Object</strong>.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="main-section" id="Variables_in_Java">
+        <header>Variables in Java</header>
+        <p>
+          A variable is a name given to a memory location. It is the basic unit
+          of storage in a program.
+        </p>
+        <ul>
+          <li>
+            The value stored in a variable can be changed during program
+            execution.
+          </li>
+          <li>
+            A variable is only a name given to a memory location, all the
+            operations done on the variable effects that memory location.
+          </li>
+          <li>In Java, all the variables must be declared before use.</li>
+        </ul>
+        <p>We can declare variables in java as follows:</p>
+        <p>
+          <strong>type</strong>: Type of data that can be stored in this
+          variable.
+        </p>
+        <p><strong>name</strong>: Name given to the variable.</p>
+        <p>
+          In this way, a name can only be given to a memory location. It can be
+          assigned values in two ways:
+        </p>
+        <ul>
+          <li>Variable Initialization</li>
+          <li>Assigning value by taking input</li>
+        </ul>
+        <div class="type_variables">
+          <h4>Types of variables</h4>
+          <p>There are three types of variables in Java :</p>
+          <ol>
+            <li>
+              <strong>Local Variables</strong>: A variable defined within a
+              block or method or constructor is called local variable.
+            </li>
+            <ul>
+              <li>
+                These variable are created when the block in entered or the
+                function is called and destroyed after exiting from the block or
+                when the call returns from the function.
+              </li>
+              <li>
+                The scope of these variables exists only within the block in
+                which the variable is declared. i.e. we can access these
+                variable only within that block.
+              </li>
+              <li>Initilisation of Local Variable is Mandatory.</li>
+            </ul>
+            <code>
+              <pre>
+                        public class StudentDetails {
+                            public void StudentAge()
+                            {
+                                // local variable age
+                                int age = 0;
+                                age = age + 5;
+                                System.out.println("Student age is : " + age);
+                            }
+                          
+                            public static void main(String args[])
+                            {
+                                StudentDetails obj = new StudentDetails();
+                                obj.StudentAge();
+                            }
+                        }
+                    </pre
+              >
+            </code>
+            <li>
+              <strong>Instance Variables</strong>: Instance variables are
+              non-static variables and are declared in a class outside any
+              method, constructor or block.
+              <ul>
+                <li>
+                  As instance variables are declared in a class, these variables
+                  are created when an object of the class is created and
+                  destroyed when the object is destroyed.
+                </li>
+                <li>
+                  Unlike local variables, we may use access specifiers for
+                  instance variables. If we do not specify any access specifier
+                  then the default access specifier will be used.
+                </li>
+                <li>
+                  Initilisation of Instance Variable is not Mandatory. Its
+                  default value is 0
+                </li>
+                <li>
+                  Instance Variable can be accessed only by creating objects.
+                </li>
+              </ul>
+              <code>
+                <pre>
+                    import java.io.*;
+                    class Marks {
+                        // These variables are instance variables.
+                        // These variables are in a class
+                        // and are not inside any function
+                        int engMarks;
+                        int mathsMarks;
+                        int phyMarks;
+                    }
+                      
+                    class MarksDemo {
+                        public static void main(String args[])
+                        {
+                            // first object
+                            Marks obj1 = new Marks();
+                            obj1.engMarks = 50;
+                            obj1.mathsMarks = 80;
+                            obj1.phyMarks = 90;
+                      
+                            // second object
+                            Marks obj2 = new Marks();
+                            obj2.engMarks = 80;
+                            obj2.mathsMarks = 60;
+                            obj2.phyMarks = 85;
+                      
+                            // displaying marks for first object
+                            System.out.println("Marks for first object:");
+                            System.out.println(obj1.engMarks);
+                            System.out.println(obj1.mathsMarks);
+                            System.out.println(obj1.phyMarks);
+                      
+                            // displaying marks for second object
+                            System.out.println("Marks for second object:");
+                            System.out.println(obj2.engMarks);
+                            System.out.println(obj2.mathsMarks);
+                            System.out.println(obj2.phyMarks);
+                        }
+                    }
+                  </pre
+                >
+              </code>
+            </li>
+            <li>
+              <strong>Static Variables</strong>: Static variables are also known
+              as Class variables.
+              <ul>
+                <li>
+                  These variables are declared similarly as instance variables,
+                  the difference is that static variables are declared using the
+                  static keyword within a class outside any method constructor
+                  or block.
+                </li>
+                <li>
+                  Unlike instance variables, we can only have one copy of a
+                  static variable per class irrespective of how many objects we
+                  create.
+                </li>
+                <li>
+                  Static variables are created at the start of program execution
+                  and destroyed automatically when execution ends.
+                </li>
+                <li>
+                  Initilisation of Static Variable is not Mandatory. Its default
+                  value is 0
+                </li>
+                <li>
+                  If we access the static variable like Instance variable
+                  (through an object), the compiler will show the warning
+                  message and it won’t halt the program. The compiler will
+                  replace the object name to class name automatically.
+                </li>
+                <li>
+                  If we access the static variable without the class name,
+                  Compiler will automatically append the class name.
+                </li>
+                <p>
+                  To access static variables, we need not create an object of
+                  that class, we can simply access the variable as
+                </p>
+                <strong>class_name.variable_name;</strong>
+                <code>
+                  <pre>
+                    import java.io.*;
+                    class Emp {
+  
+                        // static variable salary
+                        public static double salary;
+                        public static String name = "Harsh";
+                    }
+  
+                    public class EmpDemo {
+                        public static void main(String args[])
+                        {
+  
+                            // accessing static variable without object
+                            Emp.salary = 1000;
+                            System.out.println(Emp.name + "'s average salary:" + Emp.salary);
+                        }
+                    }
+                    </pre
+                  >
+                </code>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+      
+      <section class="main-section" id="Operators_in_Java">
+        <header>Operators in Java</header>
+        <p>
+          Java provides many types of operators which can be used according to
+          the need. They are classified based on the functionality they provide.
+          Some of the types are :
+        </p>
+        <ol>
+          <li>
+            <strong>Arithmetic Operators:</strong> They are used to perform
+            simple arithmetic operations on primitive data types.
+            <ul>
+              <li><b>*</b> : Multiplication</li>
+              <li><b>/</b> : Division</li>
+              <li><b>%</b> : Modulo</li>
+              <li><b>+</b> : Addition</li>
+              <li><b>-</b> : Subtraction</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Unary Operators:</strong> Unary operators need only one
+            operand. They are used to increment, decrement or negate a value.
+            <ul>
+              <li>
+                <strong>– :Unary minus</strong>, used for negating the values.
+              </li>
+              <li>
+                <strong>+ :Unary plus</strong>, indicates positive value
+                (numbers are positive without this, however). It performs an
+                automatic conversion to int when the type of its operand is
+                byte, char, or short. This is called unary numeric promotion.
+              </li>
+              <li>
+                <strong>++ :Increment operator</strong>, used for incrementing
+                the value by 1. There are two varieties of increment operator.
+              </li>
+              <li>
+                <strong>— : Decrement operator</strong>, used for decrementing
+                the value by 1. There are two varieties of decrement operator.
+              </li>
+              <li>
+                <strong>! : Logical not operator</strong>, used for inverting a
+                boolean value.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Assignment Operator: ‘=’</strong> Assignment operator is
+            used to assign a value to any variable. It has a right to left
+            associativity, i.e value given on right hand side of operator is
+            assigned to the variable on the left and therefore right hand side
+            value must be declared before using it or should be a constant.<br />
+            In many cases assignment operator can be combined with other
+            operators to build a shorter version of statement called Compound
+            Statement. For example, instead of a = a+5, we can write a += 5.
+            <ul>
+              <li>
+                <b>+=</b>, for adding left operand with right operand and then
+                assigning it to variable on the left.
+              </li>
+              <li>
+                <b>-=</b>, for subtracting left operand with right operand and
+                then assigning it to variable on the left.
+              </li>
+              <li>
+                <b>*=</b>, for multiplying left operand with right operand and
+                then assigning it to variable on the left.
+              </li>
+              <li>
+                <b>/=</b>, for dividing left operand with right operand and then
+                assigning it to variable on the left.
+              </li>
+              <li>
+                <b>%=</b>, for assigning modulo of left operand with right
+                operand and then assigning it to variable on the left.
+              </li>
+            </ul>
+            <code>
+              <pre>variable = value;</pre>
+            </code>
+          </li>
+          <li>
+            <strong>Relational Operators:</strong> These operators are used to
+            check for relations like equality, greater than, less than. They
+            return boolean result after the comparison and are extensively used
+            in looping statements as well as conditional if else statements.
+            General format is,
+            <code>
+              <pre>variable <b>relation_operator</b> value</pre>
+            </code>
+            Some of the relational operators are-
+            <ul>
+              <li>
+                <strong>==, Equal to</strong>: returns true if left hand side is
+                equal to right hand side.
+              </li>
+              <li>
+                <strong>!=, Not Equal to</strong>: returns true if left hand
+                side is not equal to right hand side.
+              </li>
+              <li>
+                <strong><, less than</strong>: returns true if left hand side is
+                less than right hand side.
+              </li>
+              <li>
+                <strong><=, less than or equal to</strong>: returns true if left
+                hand side is less than or equal to right hand side.
+              </li>
+              <li>
+                <strong>>, Greater than</strong>: returns true if left hand side
+                is greater than right hand side.
+              </li>
+              <li>
+                <strong>>=, Greater than or equal to</strong>: returns true if
+                left hand side is greater than or equal to right hand side.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Logical Operators:</strong> These operators are used to
+            perform “logical AND” and “logical OR” operation, i.e. the function
+            similar to AND gate and OR gate in digital electronics. One thing to
+            keep in mind is the second condition is not evaluated if the first
+            one is false, i.e. it has a short-circuiting effect. Used
+            extensively to test for several conditions for making a decision.
+            Conditional operators are-
+            <ul>
+              <li>
+                <strong>&&, Logical AND</strong>: returns true when both
+                conditions are true.
+              </li>
+              <li>
+                <strong>||, Logical OR</strong>: returns true if at least one
+                condition is true.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Ternary Operator:</strong> Ternary operator is a shorthand
+            version of if-else statement. It has three operands and hence the
+            name ternary. General format is- <br />
+            <code>condition ? if true : if false</code><br />
+            The above statement means that if the condition evaluates to true,
+            then execute the statements after the ‘?’ else execute the
+            statements after the ‘:’.
+            <code>
+              <pre>
+                // Java program to illustrate
+                // max of three numbers using
+                // ternary operator.
+                public class operators {
+                  public static void main(String[] args) {
+                    int a = 20, b = 10, c = 30, result;
+ 
+                    // result holds max of three
+                    // numbers
+                    result = ((a > b)
+                              ? (a > c)
+                                ? a
+                                : c
+                              : (b > c)
+                                ? b
+                                : c);
+                    System.out.println("Max of three numbers = " + result);
+                  }
+                }
+              </pre>
+            </code>
+          </li>
+          <li>
+            <strong>Bitwise Operators:</strong> These operators are used to
+            perform manipulation of individual bits of a number. They can be
+            used with any of the integer types. They are used when performing
+            update and query operations of Binary indexed tree.
+            <ul>
+              <li>
+                <strong>&, Bitwise AND operator:</strong> returns bit by bit AND
+                of input values.
+              </li>
+              <li>
+                <strong>|, Bitwise OR operator:</strong> returns bit by bit OR
+                of input values.
+              </li>
+              <li>
+                <strong>^, Bitwise XOR operator:</strong> returns bit by bit XOR
+                of input values.
+              </li>
+              <li>
+                <strong>~, Bitwise Complement Operator:</strong> This is a unary
+                operator which returns the one’s compliment representation of
+                the input value, i.e. with all bits inversed.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p></p>
+      </section>
+      
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
